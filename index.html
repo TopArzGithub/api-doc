@@ -1,0 +1,2659 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta
+            name="TopArz Trading API dcumentation"
+            content="Documentation for Trading API"
+        >
+    <title>Trading APIs Documentation</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-024da600.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-15b01b87.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#markets" class="toc-h1 toc-link" data-title="Markets">Markets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#response" class="toc-h2 toc-link" data-title="Response">Response</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#account" class="toc-h1 toc-link" data-title="Account">Account</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-balance" class="toc-h2 toc-link" data-title="Get Balance">Get Balance</a>
+                  </li>
+                  <li>
+                    <a href="#place-order" class="toc-h2 toc-link" data-title="Place Order">Place Order</a>
+                  </li>
+                  <li>
+                    <a href="#get-orders-history" class="toc-h2 toc-link" data-title="Get Orders History">Get Orders History</a>
+                  </li>
+                  <li>
+                    <a href="#get-active-orders" class="toc-h2 toc-link" data-title="Get Active Orders">Get Active Orders</a>
+                  </li>
+                  <li>
+                    <a href="#get-order-detail" class="toc-h2 toc-link" data-title="Get Order Detail">Get Order Detail</a>
+                  </li>
+                  <li>
+                    <a href="#cancel-an-order-by-id" class="toc-h2 toc-link" data-title="Cancel an Order by ID">Cancel an Order by ID</a>
+                  </li>
+                  <li>
+                    <a href="#cancel-order-by-symbol" class="toc-h2 toc-link" data-title="Cancel Order by Symbol">Cancel Order by Symbol</a>
+                  </li>
+                  <li>
+                    <a href="#get-trades-history" class="toc-h2 toc-link" data-title="Get Trades History">Get Trades History</a>
+                  </li>
+                  <li>
+                    <a href="#placing-a-crypto-withdraw-request" class="toc-h2 toc-link" data-title="Placing a Crypto Withdraw Request">Placing a Crypto Withdraw Request</a>
+                  </li>
+                  <li>
+                    <a href="#get-crypto-withdraw-history" class="toc-h2 toc-link" data-title="Get Crypto Withdraw History">Get Crypto Withdraw History</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-withdraw-request-detail" class="toc-h2 toc-link" data-title="Get a Withdraw Request Detail">Get a Withdraw Request Detail</a>
+                  </li>
+                  <li>
+                    <a href="#get-crypto-deposit-history" class="toc-h2 toc-link" data-title="Get Crypto Deposit History">Get Crypto Deposit History</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#stat-api" class="toc-h1 toc-link" data-title="Stat API">Stat API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-udf-what-the-hell-does-it-mean" class="toc-h2 toc-link" data-title="Get UDF what the hell does it mean?">Get UDF <sub><sup><sub><sup><sub><sup>what the hell does it mean?</sup></sub></sup></sub></sup></sub></a>
+                  </li>
+                  <li>
+                    <a href="#get-market-depth" class="toc-h2 toc-link" data-title="Get Market Depth">Get Market Depth</a>
+                  </li>
+                  <li>
+                    <a href="#get-last-trades-summery" class="toc-h2 toc-link" data-title="Get Last Trades Summery">Get Last Trades Summery</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#filter-query-param-help" class="toc-h1 toc-link" data-title="Filter Query Param Help">Filter Query Param Help</a>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Hey Yo!<br>
+Howudiong?</p>
+
+<p>Welcome to <a href="https://toparz.com">TopArz</a> trading api documentation.<br>
+In here you can find required information to work with out trading apis.</p>
+
+<p>first of all you have to get a token in your dashboard.</p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>Example of calling a private api</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"http://api-trading.toparz.com/SOME-PRIVATE-ROUTE"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>&lt;PUT_YOUR_TOKEN_HERE&gt;</code> with token from your dashboard</p>
+</blockquote>
+
+<p>For private api we check <code>Bearer Token</code> as authorization method so you have to get a token from your dashboard and put it as a <code>Authorization</code> header in your request header:</p>
+
+<p><code>Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;</code></p>
+
+<aside class="notice">
+You must replace <code>&lt;PUT_YOUR_TOKEN_HERE&#62;</code> with your personal API key.
+</aside>
+<h1 id='markets'>Markets</h1>
+<blockquote>
+<p>This a public api</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/markets"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDTTMN"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fa_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"تتر تومان"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"en_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tether Toman"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"base_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TMN"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fa_base_currency_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"تومان"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"en_base_currency_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toman"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"source_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fa_source_currency_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"تتر"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"en_source_currency_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tether"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"buy_side_enabled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OTC"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sell_side_enabled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BOTH"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price_digits_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"volume_digits_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>to get markets you can you this api</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /api/v1/markets</code></p>
+<h3 id='response'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>id</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>symbol</td>
+</tr>
+<tr>
+<td>fa_name</td>
+<td>string</td>
+<td>name in Farsi</td>
+</tr>
+<tr>
+<td>en_name</td>
+<td>string</td>
+<td>name in English</td>
+</tr>
+<tr>
+<td>base_currency</td>
+<td>string</td>
+<td>base currency</td>
+</tr>
+<tr>
+<td>fa_base_currency_name</td>
+<td>string</td>
+<td>base currency name in Farsi</td>
+</tr>
+<tr>
+<td>en_base_currency_name</td>
+<td>string</td>
+<td>base currency name in English</td>
+</tr>
+<tr>
+<td>source_currency</td>
+<td>string</td>
+<td>source currency</td>
+</tr>
+<tr>
+<td>fa_source_currency_name</td>
+<td>string</td>
+<td>source currency name in Farsi</td>
+</tr>
+<tr>
+<td>en_source_currency_name</td>
+<td>string</td>
+<td>source currency name in English</td>
+</tr>
+<tr>
+<td>buy_side_enabled</td>
+<td>enum</td>
+<td>status of buy side, one of these:<br><code>[ NONE, OTC, P2P, BOTH ]</code></td>
+</tr>
+<tr>
+<td>sell_side_enabled</td>
+<td>enum</td>
+<td>status of sell side, one of these:<br><code>[ NONE, OTC, P2P, BOTH ]</code></td>
+</tr>
+<tr>
+<td>price_digits_count</td>
+<td>number</td>
+<td>price digit count</td>
+</tr>
+<tr>
+<td>volume_digits_count</td>
+<td>number</td>
+<td>volumn digit count</td>
+</tr>
+</tbody></table>
+<h1 id='account'>Account</h1>
+<p>Everything from getting account balance to placing/canceling orders</p>
+<h2 id='get-balance'>Get Balance</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/balances"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"locked_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">12000</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Ever wanted to know how much money do you have? <strong><em>*rolling drums</em></strong> so I&#39;m here for bring you out of dark. call me and I&#39;ll tell you how much asset do you have, even I can tell you how much of your assets are locked.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/account/balances</code></p>
+<h3 id='response-2'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>locked_value</td>
+<td>number</td>
+<td>value of locked asset</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>currency</td>
+</tr>
+<tr>
+<td>value</td>
+<td>number</td>
+<td>value of whole assets</td>
+</tr>
+</tbody></table>
+<h2 id='place-order'>Place Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"POST"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/orders"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>Body Examples:</p>
+
+<p><code>MARKET</code> order <code>side = BUY</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">  
+    </span><span class="nl">"clint_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6921326-cd2a-48e9-9fd1-1c6296deed46"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTCTMN"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p><code>MARKET</code> order <code>side = SELL</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"clint_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6921326-cd2a-48e9-9fd1-1c6296deed46"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTCTMN"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p><code>LIMIT</code> order <code>side = BUY</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"clint_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6921326-cd2a-48e9-9fd1-1c6296deed46"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTCTMN"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p><code>LIMIT</code> order <code>side = SELL</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"clint_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6921326-cd2a-48e9-9fd1-1c6296deed46"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTCTMN"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LIMIT"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">,</span><span class="w">
+    </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p><hr></p>
+
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"order"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">93</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"command_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6921326-cd2a-48e9-9fd1-1c6296deed46"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDTTMN"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">232036</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filled_quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filled_total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">232036</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1721719000615</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"maker_fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0035</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"taker_fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0035</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FINISHED"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1721719000620</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stop_price"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stop_price_triggered"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stop_price_condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"trades"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">382</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_command_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6921326-cd2a-48e9-9fd1-1c6296deed46"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"trace_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">191</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDTTMN"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0035</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USDT"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TAKER"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P2P"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">58009</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">232036</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1721719000615</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"reverted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>For placing new order call this api.</p>
+
+<aside class="notice">
+Using this api is a little bit tricky, so read descriptions carefully and look at example for better understanding.
+
+aking why? because Based on your request we read specific paramteres from your request, in below you can see example of each request
+</aside>
+
+<p><hr></p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST /api/v1/account/orders</code></p>
+<h3 id='request'>Request</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Requiered</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_id</td>
+<td>string</td>
+<td>UUID v4 with max 36 characters<br>in case of getting <code>duplicated command id</code> send your request with new id</td>
+<td>for every APIs</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>market symbol in uppercase with <code>SourceCurrency+BaseCurrency</code> format<br>Ex. <code>BTCTMN</code>, <code>BTCUSDT</code></td>
+<td>for every APIs</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>nbumber</td>
+<td>amount of assets you want to sell</td>
+<td>when <code>side == SELL</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td>which side of history are you standing?<br><code>[ BUY, SELL ]</code></td>
+<td>for every APIs</td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>what is your type?<br><code>[ MARKET, LIMIT ]</code></td>
+<td>for every APIs</td>
+</tr>
+<tr>
+<td>price</td>
+<td>number</td>
+<td>price of each asset you want to trade</td>
+<td>when <code>type = LIMIT</code></td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>number</td>
+<td>how much of base currency you want to give?</td>
+<td>when <code>side == BUY</code></td>
+</tr>
+</tbody></table>
+<h3 id='response-3'>Response</h3>
+<ul>
+<li><p>order</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of orders</td>
+</tr>
+<tr>
+<td>command_id</td>
+<td>string</td>
+<td>id of order that you placed</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>markte symbol Ex. <code>TRXTMN</code></td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>string</td>
+<td>amount of asset that requested to sell</td>
+</tr>
+<tr>
+<td>price</td>
+<td>string</td>
+<td>price of each asset in case of <code>LIMIT</code> trade request</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>string</td>
+<td>total of currency recieving by trade</td>
+</tr>
+<tr>
+<td>filled_quantity</td>
+<td>string</td>
+<td>amount of order that filled</td>
+</tr>
+<tr>
+<td>filled_total_price</td>
+<td>string</td>
+<td>how much did you recieved so far</td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>your order type<br><code>[ MARKET, LIMIT ]</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td>side of history I mentioned earlier<br><sub><sup><sub><sup>if you don&#39;t remember go back and read the damn #*@#$%^! document this part is important, you don&#39;t bother yourself to read these then come and ask for support for what? for not reading this piece of text that I spent so much time writing instead of palying Dota</sup></sub></sup></sub><br><code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>time of placing order</td>
+</tr>
+<tr>
+<td>maker_fee_coefficient</td>
+<td>string</td>
+<td>as you guessed, coefficient of maker fee</td>
+</tr>
+<tr>
+<td>taker_fee_coefficient</td>
+<td>string</td>
+<td>coefficient of taker fee, WOW such a supprise</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>what happed to your order, one of these:<br><code>[ ACTIVE, FINISHED, CANCELED, FAILED ]</code></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>number</td>
+<td>time of last update on this entity</td>
+</tr>
+<tr>
+<td>stop_price</td>
+<td>number</td>
+<td>when it had to be stopped</td>
+</tr>
+<tr>
+<td>stop_price_triggered</td>
+<td>bool</td>
+<td>did it stopped on stopPrice or not</td>
+</tr>
+</tbody></table></li>
+<li><p>trades</p>
+
+<p>list of trades that matched with your order</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order_command_id</td>
+<td>string</td>
+<td>id of order</td>
+</tr>
+<tr>
+<td>order_side</td>
+<td>emun</td>
+<td>side of order that matched<br><code>[ BUY, SELL ]</code></td>
+</tr>
+<tr>
+<td>trace_id</td>
+<td>number</td>
+<td>some number that is none of your concern</td>
+</tr>
+<tr>
+<td>fee_coefficient</td>
+<td>number</td>
+<td>coefficient of fee</td>
+</tr>
+<tr>
+<td>fee</td>
+<td>number</td>
+<td>amount of fee</td>
+</tr>
+<tr>
+<td>fee_currency</td>
+<td>string</td>
+<td>currency of fee</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>number</td>
+<td>total price of this order</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>when did this order placed</td>
+</tr>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of trades</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>market symbol</td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td><em>uhhhh</em>, again same side of history joke<br><code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>another order type that matched with you<br><code>[ P2P, OTC ]</code><sup><sub>(if you&#39;re looking for similarity in types, even if you matched with her doesn&#39;t mean you share same tastes so use tinder instead of exchange)</sup><sub></td>
+</tr>
+<tr>
+<td>price</td>
+<td>number</td>
+<td>price of order</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>number</td>
+<td>quantity of order</td>
+</tr>
+<tr>
+<td>reverted</td>
+<td>bool</td>
+<td>did it reverted?<br>if asking what does it mean, I don&#39;t know neither</td>
+</tr>
+</tbody></table></li>
+</ul>
+<h2 id='get-orders-history'>Get Orders History</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/orders?filter=YOUR_DESIERED_FILTERS&amp;limit=10"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"command_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filled_quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filled_total_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"maker_fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"taker_fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stop_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stop_price_triggered"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Here you can see history of your orders</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET /api/v1/account/orders</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>see <a href="#filter-query-param-help">Filter Help</a></td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>number of records</td>
+<td>No</td>
+<td>number</td>
+</tr>
+</tbody></table>
+<h3 id='response-4'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of orders</td>
+</tr>
+<tr>
+<td>command_id</td>
+<td>string</td>
+<td>id of order that you placed</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>markte symbol Ex. <code>TRXTMN</code></td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>string</td>
+<td>amount of asset that requested to sell</td>
+</tr>
+<tr>
+<td>price</td>
+<td>string</td>
+<td>price of each asset in case of <code>LIMIT</code> trade request</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>string</td>
+<td>total of currency recieving by trade</td>
+</tr>
+<tr>
+<td>filled_quantity</td>
+<td>string</td>
+<td>amount of order that filled</td>
+</tr>
+<tr>
+<td>filled_total_price</td>
+<td>string</td>
+<td>how much did you recieved so far</td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>your order type<br><code>[ MARKET, LIMIT ]</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td>at this point if still you don&#39;t know what is side, so I think you have to work on some of your personal skills. just becasuse Hooman will kill me here&#39;s a breif explanation:<br><code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>time of placing order</td>
+</tr>
+<tr>
+<td>maker_fee_coefficient</td>
+<td>string</td>
+<td>yes, coefficient of maker fee</td>
+</tr>
+<tr>
+<td>taker_fee_coefficient</td>
+<td>string</td>
+<td>and obviously coefficient of taker fee</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>what happed to your order, one of these:<br><code>[ ACTIVE, FINISHED, CANCELED, FAILED ]</code></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>number</td>
+<td>time of last update on this entity</td>
+</tr>
+<tr>
+<td>stop_price</td>
+<td>number</td>
+<td>when it had to be stopped</td>
+</tr>
+<tr>
+<td>stop_price_triggered</td>
+<td>bool</td>
+<td>did it stopped on stopPrice or not</td>
+</tr>
+</tbody></table>
+<h2 id='get-active-orders'>Get Active Orders</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/orders/active?filter=YOUR_DESIERED_FILTERS&amp;limit=10"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filledQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filledTotalPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"makerFeeCoefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"takerFeeCoefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stopPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stopPriceTriggered"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>As title suggested give list of your active orders</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET /api/v1/account/orders/active</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>see <a href="#filter-query-param-help">Filter Help</a></td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>number of records</td>
+<td>No</td>
+<td>number</td>
+</tr>
+</tbody></table>
+<h3 id='response-5'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of orders</td>
+</tr>
+<tr>
+<td>command_id</td>
+<td>string</td>
+<td>id of order that you placed</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>markte symbol Ex. <code>TRXTMN</code></td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>string</td>
+<td>amount of asset that requested to sell</td>
+</tr>
+<tr>
+<td>price</td>
+<td>string</td>
+<td>price of each asset in case of <code>LIMIT</code> trade request</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>string</td>
+<td>total of currency recieving by trade</td>
+</tr>
+<tr>
+<td>filled_quantity</td>
+<td>string</td>
+<td>amount of order that filled</td>
+</tr>
+<tr>
+<td>filled_total_price</td>
+<td>string</td>
+<td>how much did you recieved so far</td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>your order type<br><code>[ MARKET, LIMIT ]</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td>a palceholder joke with side<br><code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>time of placing order</td>
+</tr>
+<tr>
+<td>maker_fee_coefficient</td>
+<td>string</td>
+<td>as you guessed, coefficient of maker fee</td>
+</tr>
+<tr>
+<td>taker_fee_coefficient</td>
+<td>string</td>
+<td>coefficient of taker fee, WOW such a supprise</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>what happed to your order, one of these:<br><code>[ ACTIVE, FINISHED, CANCELED, FAILED ]</code></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>number</td>
+<td>time of last update on this entity</td>
+</tr>
+<tr>
+<td>stop_price</td>
+<td>number</td>
+<td>when it had to be stopped</td>
+</tr>
+<tr>
+<td>stop_price_triggered</td>
+<td>bool</td>
+<td>did it stopped on stopPrice or not</td>
+</tr>
+</tbody></table>
+<h2 id='get-order-detail'>Get Order Detail</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/orders/{client_order_id}"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"order"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filledQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filledTotalPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"makerFeeCoefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"takerFeeCoefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stopPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stopPriceTriggered"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"trades"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"order_command_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"trace_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee_currency"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TAKER"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P2P"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"reverted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"error_code"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Detail of order if it&#39;s already completed or canceled or is ongoing</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET /api/v1/account/orders/{client_order_id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_order_id</td>
+<td>path</td>
+<td>id of order you want</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+</tbody></table>
+<h3 id='response-6'>Response</h3>
+<ul>
+<li><p>order</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of orders</td>
+</tr>
+<tr>
+<td>command_id</td>
+<td>string</td>
+<td>id of order that you placed</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>markte symbol Ex. <code>TRXTMN</code></td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>string</td>
+<td>amount of asset that requested to sell</td>
+</tr>
+<tr>
+<td>price</td>
+<td>string</td>
+<td>price of each asset in case of <code>LIMIT</code> trade request</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>string</td>
+<td>total of currency recieving by trade</td>
+</tr>
+<tr>
+<td>filled_quantity</td>
+<td>string</td>
+<td>amount of order that filled</td>
+</tr>
+<tr>
+<td>filled_total_price</td>
+<td>string</td>
+<td>how much did you recieved so far</td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>your order type<br><code>[ MARKET, LIMIT ]</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td>SIDE<code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>time of placing order</td>
+</tr>
+<tr>
+<td>maker_fee_coefficient</td>
+<td>string</td>
+<td>as you guessed, coefficient of maker fee</td>
+</tr>
+<tr>
+<td>taker_fee_coefficient</td>
+<td>string</td>
+<td>coefficient of taker fee, WOW such a supprise</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>what happed to your order, one of these:<br><code>[ ACTIVE, FINISHED, CANCELED, FAILED ]</code></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>number</td>
+<td>time of last update on this entity</td>
+</tr>
+<tr>
+<td>stop_price</td>
+<td>number</td>
+<td>when it had to be stopped</td>
+</tr>
+<tr>
+<td>stop_price_triggered</td>
+<td>bool</td>
+<td>did it stopped on stopPrice or not</td>
+</tr>
+</tbody></table></li>
+<li><p>trades</p>
+
+<p>list of trades that matched with your order</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order_command_id</td>
+<td>string</td>
+<td>id of order</td>
+</tr>
+<tr>
+<td>order_side</td>
+<td>emun</td>
+<td>side of order that matched<br><code>[ BUY, SELL ]</code></td>
+</tr>
+<tr>
+<td>trace_id</td>
+<td>number</td>
+<td>some number :)</td>
+</tr>
+<tr>
+<td>fee_coefficient</td>
+<td>number</td>
+<td>coefficient of fee</td>
+</tr>
+<tr>
+<td>fee</td>
+<td>number</td>
+<td>amount of fee</td>
+</tr>
+<tr>
+<td>fee_currency</td>
+<td>string</td>
+<td>currency of fee (do I need to explain all of these?)</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>number</td>
+<td>total price of this order</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>when did this order placed</td>
+</tr>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of trades</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>market symbol</td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td><strong>SIDE</strong><br><code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>order type that matched<br><code>[ P2P, OTC ]</code></td>
+</tr>
+<tr>
+<td>price</td>
+<td>number</td>
+<td>price of order</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>number</td>
+<td>quantity of order</td>
+</tr>
+<tr>
+<td>reverted</td>
+<td>bool</td>
+<td>did it reverted or not</td>
+</tr>
+</tbody></table></li>
+</ul>
+<h2 id='cancel-an-order-by-id'>Cancel an Order by ID</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"DELETE"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/orders/{client_order_id}"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"order"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"commandId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filledQuantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"filledTotalPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"makerFeeCoefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"takerFeeCoefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stopPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stopPriceTriggered"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Have ever did something and immediately said <a href="https://www.reddit.com/r/instant_regret/"><strong>OH! $#!+</strong></a>. don&#39;t worry I&#39;m here just for you, if you put a stupid order or very super optimistic one or even if you are bipolar and don&#39;t know what you are doing with your life (who am I to judge) and want to cancel your previous orders, you can use me to cancel remaing orders.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>DELETE /api/v1/account/orders/{client_order_id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_order_id</td>
+<td>path</td>
+<td>id of order you want to cancel</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+</tbody></table>
+<h3 id='response-7'>Response</h3>
+<p>data of <em>RIP</em> ed order <em>(F in the chat)</em></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of orders</td>
+</tr>
+<tr>
+<td>command_id</td>
+<td>string</td>
+<td>id of order that you placed</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>markte symbol Ex. <code>TRXTMN</code></td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>string</td>
+<td>amount of asset that requested to sell</td>
+</tr>
+<tr>
+<td>price</td>
+<td>string</td>
+<td>price of each asset in case of <code>LIMIT</code> trade request</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>string</td>
+<td>total of currency recieving by trade</td>
+</tr>
+<tr>
+<td>filled_quantity</td>
+<td>string</td>
+<td>amount of order that filled</td>
+</tr>
+<tr>
+<td>filled_total_price</td>
+<td>string</td>
+<td>how much did you recieved so far</td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>your order type<br><code>[ MARKET, LIMIT ]</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td>I copy/past all of table and have to change this row, just tierd of generating new joke, side of order:<br><code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>time of placing order</td>
+</tr>
+<tr>
+<td>maker_fee_coefficient</td>
+<td>string</td>
+<td>coefficient of maker fee</td>
+</tr>
+<tr>
+<td>taker_fee_coefficient</td>
+<td>string</td>
+<td>coefficient of taker *<em>checks note</em>  fee</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>what happed to your order, one of these:<br><code>[ ACTIVE, FINISHED, CANCELED, FAILED ]</code></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>number</td>
+<td>time of last update on this entity</td>
+</tr>
+<tr>
+<td>stop_price</td>
+<td>number</td>
+<td>when it had to be stopped</td>
+</tr>
+<tr>
+<td>stop_price_triggered</td>
+<td>bool</td>
+<td>did it stopped on stopPrice before you kill him, how dare you?</td>
+</tr>
+</tbody></table>
+<h2 id='cancel-order-by-symbol'>Cancel Order by Symbol</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"DELTE"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/orders?symbol=BTCTMN"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"orders"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"command_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"filled_quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"filled_total_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MARKET"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"maker_fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"taker_fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"stop_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"stop_price_triggered"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>You can undo your mistakes by its symbol too, but pay attention that it is possible only in our system, so don&#39;t go and text your Ex that&#39;s <strong>not</strong> undoable I promise you she is as toxic as ever was before and will be.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>DELETE /api/v1/account/orders</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>query</td>
+<td>market symbol of orders to cancel<br>not sending it will cancel all of your orders<br><code>TRXUSDT</code></td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='response-8'>Response</h3>
+<p>data of canceled order</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of orders</td>
+</tr>
+<tr>
+<td>command_id</td>
+<td>string</td>
+<td>id of order that you placed</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>markte symbol Ex. <code>TRXTMN</code></td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>string</td>
+<td>amount of asset that requested to sell</td>
+</tr>
+<tr>
+<td>price</td>
+<td>string</td>
+<td>price of each asset in case of <code>LIMIT</code> trade request</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>string</td>
+<td>total of currency recieving by trade</td>
+</tr>
+<tr>
+<td>filled_quantity</td>
+<td>string</td>
+<td>amount of order that filled</td>
+</tr>
+<tr>
+<td>filled_total_price</td>
+<td>string</td>
+<td>how much did you recieved so far</td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>your order type<br><code>[ MARKET, LIMIT ]</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td>side DIGE!<br><code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>time of placing order</td>
+</tr>
+<tr>
+<td>maker_fee_coefficient</td>
+<td>string</td>
+<td>coefficient of maker fee</td>
+</tr>
+<tr>
+<td>taker_fee_coefficient</td>
+<td>string</td>
+<td>coefficient of taker fee</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>what happed to your order, one of these:<br><code>[ ACTIVE, FINISHED, CANCELED, FAILED ]</code></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>number</td>
+<td>time of last update on this entity</td>
+</tr>
+<tr>
+<td>stop_price</td>
+<td>number</td>
+<td>when it had to be stopped</td>
+</tr>
+<tr>
+<td>stop_price_triggered</td>
+<td>bool</td>
+<td>did it stopped on stopPrice before massacre</td>
+</tr>
+</tbody></table>
+<h2 id='get-trades-history'>Get Trades History</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/trades"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"order_command_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"order_side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"trace_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fee_coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fee_currency"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TAKER"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P2P"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reverted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Show history of your trades</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET /api/v1/account/trades</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>see <a href="#filter-query-param-help">Filter Help</a></td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>number of records</td>
+<td>No</td>
+<td>number</td>
+</tr>
+</tbody></table>
+<h3 id='response-9'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order_command_id</td>
+<td>string</td>
+<td>id of order</td>
+</tr>
+<tr>
+<td>order_side</td>
+<td>emun</td>
+<td>side of order that matched<br><code>[ BUY, SELL ]</code></td>
+</tr>
+<tr>
+<td>trace_id</td>
+<td>number</td>
+<td>some number that is none of your business</td>
+</tr>
+<tr>
+<td>fee_coefficient</td>
+<td>number</td>
+<td>coefficient of fee</td>
+</tr>
+<tr>
+<td>fee</td>
+<td>number</td>
+<td>amount of fee</td>
+</tr>
+<tr>
+<td>fee_currency</td>
+<td>string</td>
+<td>currency of fee</td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>number</td>
+<td>total price of this order</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>when did this order placed</td>
+</tr>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>increamental id of trades</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>market symbol</td>
+</tr>
+<tr>
+<td>side</td>
+<td>enum</td>
+<td>SIDE SIDE SIDE SIDE<br><code>[ BUY, SELL]</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td>enum</td>
+<td>trade type<br><code>[ P2P, OTC ]</code></td>
+</tr>
+<tr>
+<td>price</td>
+<td>number</td>
+<td>price of order</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>number</td>
+<td>quantity of order</td>
+</tr>
+<tr>
+<td>reverted</td>
+<td>bool</td>
+<td>did it reverted or not</td>
+</tr>
+</tbody></table>
+<h2 id='placing-a-crypto-withdraw-request'>Placing a Crypto Withdraw Request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"POST"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/crypto-withdraw"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>Body:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BITCOIN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>In case of want to withdraw your assets from us you can use this API (<a href="https://youtu.be/XJFFgc9jZz0?si=7RKMxA_inmxX0MdN">but please don&#39;t</a>)</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>POST /api/v1/account/crypto-withdraw</code></p>
+<h3 id='body'>Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_id</td>
+<td>string</td>
+<td>UUID v4 (max 36 characters)</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>symbol of currency you want Ex. <code>BTC</code></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>number</td>
+<td>amount of your asset you want</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>string</td>
+<td>destination wallet</td>
+</tr>
+<tr>
+<td>network_id</td>
+<td>string</td>
+<td>network id Ex. <code>BITCOIN</code>, <code>TRON</code></td>
+</tr>
+</tbody></table>
+<h2 id='get-crypto-withdraw-history'>Get Crypto Withdraw History</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/crypto-withdraw"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-07-23T12:27:34.235Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"network_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BITCOIN"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"transaction_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DRAFT"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>You can see how much money you withdraw <sub><sup><em>*cough</em> steal <em>*cough</em></sup></sub> from us.</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET /api/v1/account/crypto-withdraw</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>sorting order<br>Ex. <code>created_at;ASC</code></td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>index of page you want</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>page_size</td>
+<td>query</td>
+<td>size of each page</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>currency_filter</td>
+<td>query</td>
+<td>one of<br><code>[ BTC, ETH, TRX, USDT ]</code></td>
+<td>No</td>
+<td>enum</td>
+</tr>
+<tr>
+<td>network_filter</td>
+<td>query</td>
+<td>one of<br><code>[ BITCOIN, ETHEREUM, TRON, DODGE ]</code></td>
+<td>No</td>
+<td>enum</td>
+</tr>
+<tr>
+<td>status_filter</td>
+<td>query</td>
+<td>one of<br><code>[ DRAFT, IN_PROGRESS, COMPLETE, FAIL ]</code></td>
+<td>No</td>
+<td>enum</td>
+</tr>
+</tbody></table>
+<h3 id='response-10'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>id of your request</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>string</td>
+<td>unique id that you sent with your request</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Date</td>
+<td>date of placing request</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>string</td>
+<td>destination wallet</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>number</td>
+<td>amount of asset for withdrawing</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>currency of asset that you withdrawed</td>
+</tr>
+<tr>
+<td>network_name</td>
+<td>string</td>
+<td>name of network</td>
+</tr>
+<tr>
+<td>network_id</td>
+<td>string</td>
+<td>on which network it was</td>
+</tr>
+<tr>
+<td>transaction_id</td>
+<td>string</td>
+<td>unique id for tracking</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>state of your request</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-withdraw-request-detail'>Get a Withdraw Request Detail</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/crypto-withdraw/{client_id}"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"commandId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Send client id and get detail of your withdraw request</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET /api/v1/account/crypto-withdraw/{client_id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_id</td>
+<td>path</td>
+<td>client id that you are searching for</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='response-11'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='get-crypto-deposit-history'>Get Crypto Deposit History</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/account/crypto-deposit"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-07-23T13:06:41.778Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"network_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BITCOIN"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"network_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"transaction_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>History of deposits in your dedicated wallet</p>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>GET /api/v1/account/crypto-deposit</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>sorting order<br>Ex. <code>created_at;ASC</code></td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>index of page you want</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>page_size</td>
+<td>query</td>
+<td>size of each page</td>
+<td>No</td>
+<td>number</td>
+</tr>
+</tbody></table>
+<h3 id='response-12'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>Date</td>
+<td>time of deposit happening</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>number</td>
+<td>amount of asset deposited</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>currency of deposit</td>
+</tr>
+<tr>
+<td>network_id</td>
+<td>string</td>
+<td>in which network it was</td>
+</tr>
+<tr>
+<td>network_name</td>
+<td>string</td>
+<td>name of that network</td>
+</tr>
+<tr>
+<td>transaction_id</td>
+<td>string</td>
+<td>id to track trasaction</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>state of transaction<br><code>[ IN_PROGRESS, DONE ]</code></td>
+</tr>
+</tbody></table>
+<h1 id='stat-api'>Stat API</h1>
+<p>Everythings that are related to our system statistics that may be useful to you :wink: :heart:</p>
+<h2 id='get-udf-what-the-hell-does-it-mean'>Get UDF <sub><sup><sub><sup><sub><sup>what the hell does it mean?</sup></sub></sup></sub></sup></sub></h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/udf"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"open_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"highest_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"lowest_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"close_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"trade_volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"trade_total_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resolution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MINUTELY"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Don&#39;t know what is it doing!</p>
+<h3 id='http-request-14'>HTTP Request</h3>
+<p><code>GET /api/v1/udf</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>query</td>
+<td>symbol of market</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>resolution</td>
+<td>query</td>
+<td><code>[ MINUTELY, HOURLY, DAILY ]</code></td>
+<td>Yes</td>
+<td>enum</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td>query</td>
+<td>start time obviously</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+<tr>
+<td>end_time</td>
+<td>query</td>
+<td>end of period</td>
+<td>Yes</td>
+<td>number</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>number of record limit</td>
+<td>No</td>
+<td>number</td>
+</tr>
+</tbody></table>
+<h3 id='response-13'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start_time</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>open_price</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>highest_price</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>lowest_price</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>close_price</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>trade_volume</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>trade_total_price</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>this data is for that symbol</td>
+</tr>
+<tr>
+<td>resolution</td>
+<td>enum</td>
+<td><code>[ MINUTELY, HOURLY, DAILY ]</code></td>
+</tr>
+</tbody></table>
+<h2 id='get-market-depth'>Get Market Depth</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/depth/{symbol}"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Get metket depth base on market</p>
+<h3 id='http-request-15'>HTTP Request</h3>
+<p><code>GET /api/v1/depth/{symbol}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>path</td>
+<td>market symbol you&#39;re looking for</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='response-14'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>asks</td>
+<td>array</td>
+<td>sell orders</td>
+</tr>
+<tr>
+<td>bids</td>
+<td>array</td>
+<td>buy orders</td>
+</tr>
+</tbody></table>
+<h2 id='get-last-trades-summery'>Get Last Trades Summery</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"GET"</span> <span class="se">\</span>
+    <span class="s2">"https://api-trading.toparz.com/api/v1/latest-trade-summaries/{symbol}"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;PUT_YOUR_TOKEN_HERE&gt;"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"taker_order_side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUY"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>lasest trades based on a market</p>
+<h3 id='http-request-16'>HTTP Request</h3>
+<p><code>GET /api/v1/latest-trade-summaries/{symbol}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>path</td>
+<td>market symbol you&#39;re looking for</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='response-15'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>when it placed</td>
+</tr>
+<tr>
+<td>taker_order_side</td>
+<td>enum</td>
+<td>finally it&#39;s last side I&#39;m writing (for now)<br><code>[ BUY, SELL ]</code></td>
+</tr>
+<tr>
+<td>price</td>
+<td>number</td>
+<td>price of it</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>number</td>
+<td>amount of it</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>symbol of it</td>
+</tr>
+</tbody></table>
+<h1 id='filter-query-param-help'>Filter Query Param Help</h1>
+<blockquote>
+<p>Filter options (<code>op</code> = operator):</p>
+
+<ul>
+<li><code>order_command_id op value</code><br></li>
+<li><code>side op value</code><br></li>
+<li><code>created_at op value</code><br></li>
+<li><code>created_at op value</code><br></li>
+<li><code>created_at op value ;fee_currency op value</code><br></li>
+<li><code>created_at op value ;fee_currency op value ;id op value</code><br></li>
+<li><code>created_at op value</code><br></li>
+<li><code>created_at op value ;id op value</code><br></li>
+<li><code>symbol op value</code><br></li>
+<li><code>symbol op value ;created_at op value</code><br></li>
+<li><code>symbol op value ;created_at op value ;id op value</code><br></li>
+<li><code>order_side op value</code><br></li>
+<li><code>order_side op value ;created_at op value</code><br></li>
+<li><code>order_side op value ;created_at op value ;id op value</code><br></li>
+<li><code>order_side op value ;symbol op value</code><br></li>
+<li><code>order_side op value ;symbol op value ;created_at op value</code><br></li>
+<li><code>order_side op value ;symbol op value ;created_at op value ;id op value</code><br></li>
+<li><code>trace_id op value</code><br></li>
+<li><code>updated_at op value</code> </li>
+</ul>
+</blockquote>
+
+<p>Some of APIs use query params this is how you can use them:</p>
+
+<p>For filtering we use this format:<br>
+<code>a=value;b&gt;123;c&lt;=456;b#1,2,3</code></p>
+
+<ul>
+<li>Each part contains:
+
+<ul>
+<li>a name (name of filtering column)</li>
+<li>one of <code>=</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>#</code></li>
+<li>a value</li>
+</ul></li>
+<li>Multiple conditions are separated by <code>;</code> and all conditions are <code>AND</code>ed together</li>
+<li>We use <code>#</code> operate as <code>in</code></li>
+</ul>
+
+<aside class="notice">
+I hope you can assume that white spaces are just for better readability and in final request you must not use any whitspace between filter name and operator or value
+</aside>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
