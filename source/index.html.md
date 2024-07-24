@@ -19,12 +19,11 @@ meta:
 # Introduction
 
 Hey Yo!  
-Howudiong?
+How u diong?
 
-Welcome to [TopArz](https://toparz.com) trading api documentation.  
-In here you can find required information to work with out trading apis.
-
-first of all you have to get a token in your dashboard.
+Welcome to [TopArz](https://toparz.com) trading API documentation.
+Here you can find the required information to work with trading APIs.
+First of all, you have to get a token in your dashboard.
 
 # Authentication
 
@@ -130,7 +129,7 @@ curl "GET" \
 }
 ```
 
-Ever wanted to know how much money do you have? ***\*rolling drums*** so I'm here for bring you out of dark. call me and I'll tell you how much asset do you have, even I can tell you how much of your assets are locked.
+Ever wanted to know how much money do you have? ***\*rolling drums*** so I'm here to bring you out of the dark. Call me and I'll tell you how many of each asset you have, even I can tell you how many of your assets are locked.
 
 ### HTTP Request
 `GET /api/v1/account/balances`
@@ -257,9 +256,9 @@ curl "POST" \
 For placing new order call this api.
 
 <aside class="notice">
-Using this api is a little bit tricky, so read descriptions carefully and look at example for better understanding.
+Using this API is a bit tricky, so read descriptions carefully and look at examples for better understanding.
 
-aking why? because Based on your request we read specific paramteres from your request, in below you can see example of each request
+Asking why? Based on your request, we read specific parameters from your request, here are some examples of each request
 </aside>
 
 <hr>
@@ -625,7 +624,7 @@ curl "DELETE" \
 }
 ```
 
-Have ever did something and immediately said [**OH! $#!+**](https://www.reddit.com/r/instant_regret/). don't worry I'm here just for you, if you put a stupid order or very super optimistic one or even if you are bipolar and don't know what you are doing with your life (who am I to judge) and want to cancel your previous orders, you can use me to cancel remaing orders.
+Have ever did something and immediately said [**OH! $#!+**](https://www.reddit.com/r/instant_regret/). don't worry I'm here just for you if you put a stupid order or a very super optimistic one or even if you are bipolar and don't know what you are doing with your life (who am I to judge) and want to cancel your previous orders, you can use me to cancel remaining orders.
 
 ### HTTP Request
 `DELETE /api/v1/account/orders/{client_order_id}`
@@ -700,7 +699,7 @@ curl "DELTE" \
 }
 ```
 
-You can undo your mistakes by its symbol too, but pay attention that it is possible only in our system, so don't go and text your Ex that's **not** undoable I promise you she is as toxic as ever was before and will be.
+You can undo your mistakes by its symbol too, but pay attention that it is possible only in our system.
 
 ### HTTP Request
 `DELETE /api/v1/account/orders`
